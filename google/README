@@ -1,0 +1,37 @@
+NOTE:
+
+in using any Google Cloud Application
+developer is required to create a service account
+https://cloud.google.com/docs/authentication/getting-started
+then
+proceed with following the procedure of activating the key file
+https://cloud.google.com/docs/authentication/production
+depending on your cloud platform is where the key file will be located.
+in AWS Beanstalk, 'var/app/current' directory
+is usually the root directory of your project
+then set to point your GOOGLE_APPLICATION_CREDENTIALS env var
+to just the name of your key file e.g. service-account.json
+
+or
+
+Can be a alternative method
+for loading the google application credential file
+without using the system environment variable
+GOOGLE_APPLICATION_CREDENTIALS
+with the snippet below:
+'var _storage = new CStorage({keyFilename:GOOGLE_APPLICATION_CREDENTIALS});
+_storage.getBuckets()
+.then
+(
+   function(p_result)
+   {
+      var _buckets = p_result[0];
+      log("m_funcSendRequest(), Buckets:" );
+      _buckets.forEach((_bucket)=>{log(_bucket);});
+   }
+).catch(
+   function(p_err)
+   {
+      log("m_funcSendRequest(), ERROR:" + p_err );
+   }
+);'

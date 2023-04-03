@@ -1,0 +1,8 @@
+for the aws-sdk to work it needs configuration
+here is one guide for setting it up through environment variables
+https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/loading-node-credentials-environment.html
+and here are the other options to do load
+https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html
+
+Regions List:
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html

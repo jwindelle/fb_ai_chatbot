@@ -1,0 +1,25 @@
+<p>
+facebook ID: <%= user.id %><br/>
+
+<% if (user.pageid) { %>
+   page ID: <%= user.pageid %><br/>
+<% } %>
+
+<% if (user.userid) { %>
+   messenger ID: <%= user.userid %><br/>
+<% } %>
+
+Username: <%= user.username %><br/>
+Name: <%= user.displayName %><br/>
+
+<% if (user.emails) { %>
+	Email: <%= user.emails[0].value %><br/><br/>
+<% } %>
+
+<% if(redirectURI){ %>
+   <a href=" <%= redirectURI %> "><%= redirectURI %></a>
+<% } %>
+
+<!--</br><a href="/facebook/logout">Log Out</a><br/>-->
+
+</p>
